@@ -19,7 +19,7 @@
 
 ## **Overview**
 
-This project provides automated scripts and configuration workflows for downloading and building the official MaxMind GeoLite2-Country.mmdb database, generating IP geolocation data covering all countries and regions worldwide. It is designed to provide trusted sourcing, transparent data flow, and automatic updates for tools such as Surge, Clash, Shadowrocket, and Quantumult X, enabling more accurate country-level routing and traffic control.
+This project provides automated scripts and configuration workflows for downloading and building the official MaxMind GeoLite2-Country.mmdb database, enabling users to automatically generate country-level IP geolocation data based on their own MaxMind License Key. It is designed to deliver trusted sourcing, transparent data flow, and automatic updates for tools such as Surge, Clash, Shadowrocket, and Quantumult X, enabling more accurate country-level routing and traffic control.
 
 ## **Project Background**
 
