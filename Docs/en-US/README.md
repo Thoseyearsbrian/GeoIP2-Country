@@ -45,6 +45,21 @@ This project utilizes GitHub Actions for scheduled updates, pulling the latest d
 
 ## **Configuration Guide**
 
+Configure MaxMind License Key (Required)
+
+This project requires access to the official MaxMind GeoLite2 database. To enable automated updates, you must:
+
+1. Register on [MaxMind](https://www.maxmind.com) and obtain your GeoLite2 License Key
+
+2. Open your repository: GitHub → Settings → Secrets and variables → Actions
+
+3. Create the following Secrets (names must match exactly):
+
+- MAXMIND_ACCOUNT_ID      # Your MaxMind Account ID  (Required)
+- MAXMIND_LICENSE_KEY     # Your MaxMind License Key (Required)
+
+## **Usage Guide**
+
 Copy the file URL → Open Surge → Go to General → GeoIP Database → Remove previous configuration (if any) → Paste the new URL → Update Now → Apply → Done!
 
 <p align="center">

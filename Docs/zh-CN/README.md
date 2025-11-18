@@ -45,6 +45,21 @@
 
 ## 配置方式
 
+配置 MaxMind License Key（必需）
+
+本项目需要访问 MaxMind 官方 GeoLite2 数据库，因此您需要：
+
+1.前往 [MaxMind 官网](https://www.maxmind.com) 注册账户并获取 GeoLite2 License Key
+
+2.打开仓库：Secrets 配置列表（在 GitHub → Settings → Secrets → Actions 中添加）
+
+3.新建以下 Secrets（名称必须完全一致）：
+
+- MAXMIND_ACCOUNT_ID      # 你的 MaxMind Account ID （必填）
+- MAXMIND_LICENSE_KEY     # 你的 MaxMind License Key（必填）
+
+## 使用教程
+
 复制文件路径 -> 打开 Surge -> 打开 通用 -> GeoIp数据库 -> 删除历史配置（如有） -> 粘贴链接 -> 现在更新 -> 应用 -> 完成!
 
 <p align="center">
