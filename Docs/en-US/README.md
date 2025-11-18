@@ -1,3 +1,8 @@
+<!-- Aegis Logo -->
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Thoseyearsbrian/Aegis/main/assets/Aegis_Cover_Image.png" alt="Aegis Cover Image"/>
+</p>
+
 <h1 align="center">GeoIP2-Country: Auto Build and Update Solution</h1>
 
 <p align="center">
