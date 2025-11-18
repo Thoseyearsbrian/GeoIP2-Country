@@ -14,7 +14,7 @@
 
 ## 项目概述
 
-本项目提供自动下载并构建 MaxMind 官方 GeoLite2-Country.mmdb 数据库的脚本与配置方案，生成覆盖全球各国家与地区的 IP 地理定位数据文件。项目旨在为 Surge、Clash、Shadowrocket、Quantumult X 等网络工具提供 来源可信、链路透明、独立更新 的国家级 IP 定位支持，实现更精确的国家级分流策略与路由控制。
+本项目提供自动下载并构建 MaxMind 官方 GeoLite2-Country.mmdb 数据库的脚本与配置方案，生成覆盖全球各国家与地区的 IP 地理定位数据文件。项目旨在为 Surge、Clash、Shadowrocket、Quantumult X 等网络工具提供 来源可信、链路透明、自动更新 的国家级 IP 定位支持，实现更精确的国家级分流策略与路由控制。
 
 ## 项目背景
 
