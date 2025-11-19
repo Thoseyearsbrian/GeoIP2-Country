@@ -11,6 +11,9 @@
   <img src="https://img.shields.io/github/stars/Thoseyearsbrian/GeoIP2-Country?style=social" alt="GitHub stars" />
   <img src="https://img.shields.io/github/v/release/Thoseyearsbrian/GeoIP2-Country?include_prereleases&label=version" alt="Version" />
   <img src="https://img.shields.io/github/last-commit/Thoseyearsbrian/GeoIP2-Country" alt="Last Commit" />
+  <a href="https://github.com/Thoseyearsbrian/GeoIP2-Country">
+    <img src="https://img.shields.io/badge/Mirror--Prohibited-red" alt="Mirror Prohibited" />
+  </a>
 </p>
 
 <p align="center">
