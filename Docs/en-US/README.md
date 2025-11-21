@@ -3,30 +3,30 @@
   <img src="https://raw.githubusercontent.com/Thoseyearsbrian/Aegis/main/assets/Aegis_Cover_Image.png" alt="Aegis Cover Image"/>
 </p>
 
-<h1 align="center">GeoIP2-Country: Auto Build and Update Solution</h1>
+<h1 align="center">GeoIP2-ASN: Auto Build and Update Solution</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache 2.0" />
-  <img src="https://github.com/Thoseyearsbrian/GeoIP2-Country/actions/workflows/update.yml/badge.svg" alt="GeoIP Auto Update Status" />
-  <img src="https://img.shields.io/github/stars/Thoseyearsbrian/GeoIP2-Country?style=social" alt="GitHub stars" />
-  <img src="https://img.shields.io/github/v/release/Thoseyearsbrian/GeoIP2-Country?include_prereleases&label=version" alt="Version" />
-  <img src="https://img.shields.io/github/last-commit/Thoseyearsbrian/GeoIP2-Country" alt="Last Commit" />
-  <a href="https://github.com/Thoseyearsbrian/GeoIP2-Country">
+  <img src="https://github.com/Thoseyearsbrian/GeoIP2-ASN/actions/workflows/update.yml/badge.svg" alt="GeoIP Auto Update Status" />
+  <img src="https://img.shields.io/github/stars/Thoseyearsbrian/GeoIP2-ASN?style=social" alt="GitHub stars" />
+  <img src="https://img.shields.io/github/v/release/Thoseyearsbrian/GeoIP2-ASN?include_prereleases&label=version" alt="Version" />
+  <img src="https://img.shields.io/github/last-commit/Thoseyearsbrian/GeoIP2-ASN" alt="Last Commit" />
+  <a href="https://github.com/Thoseyearsbrian/GeoIP2-ASN">
     <img src="https://img.shields.io/badge/Mirror--Prohibited-red" alt="Mirror Prohibited" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Thoseyearsbrian/GeoIP2-Country/blob/main/Docs/zh-CN/README.md"><b>【中文文档点此进入】</b></a>
+  <a href="https://github.com/Thoseyearsbrian/GeoIP2-ASN/blob/main/Docs/zh-CN/README.md"><b>【中文文档点此进入】</b></a>
 </p>
 
 ## **Overview**
 
-This project provides automated scripts and configuration workflows for downloading and building the official MaxMind GeoLite2-Country.mmdb database, enabling users to automatically generate country-level IP geolocation data based on their own MaxMind License Key. It is designed to deliver trusted sourcing, transparent data flow, and automatic updates for tools such as Surge, Clash, Shadowrocket, and Quantumult X, enabling more accurate country-level routing and traffic control.
+This project provides scripts and configuration templates to automatically download and build the official GeoLite2-ASN.mmdb database from MaxMind. With a valid MaxMind License Key, users can generate a global IP-to-ASN (Autonomous System Number) attribution dataset. The project is designed to support tools such as Surge, Clash, Shadowrocket, and Quantumult X by offering a trustworthy, transparent, and automatically updated ASN-based network attribution database. It helps users identify the network ownership behind traffic flows (e.g., cloud providers, telecom operators, or infrastructure entities), enabling more precise traffic routing, security policy control, and infrastructure categorization.
 
 ## **Project Background**
 
-GeoIP databases are widely used in network security and traffic policy routing to determine IP geolocation and assist with smart routing or access control. Many current projects rely on third-party distribution sources, which introduce potential risks:
+In network security and traffic attribution scenarios, the GeoIP ASN database is widely used to determine the network organization behind an IP address — such as cloud service providers, telecom carriers, or VPS hosting companies. It plays an essential role in traffic routing, behavioral analysis, and infrastructure classification. However, many existing projects rely on secondary distribution sources or lack automated update mechanisms, leading to several potential issues:
 
 - **Lack of trust chain**: Non-official sources cannot be audited and may be tampered with;
 - **Poor maintainability**: Sources may become unavailable without notice;
@@ -49,7 +49,7 @@ This project utilizes GitHub Actions for scheduled updates, pulling the latest d
 
 | **Filename** | **Build Output Path (for reference only)**                   | **Example Usage**                                        |
 | ------------ | ------------------------------------------------------------ | -------------------------------------------------------- |
-| Country.mmdb | [data/Country.mmdb](https://raw.githubusercontent.com/Thoseyearsbrian/GeoIP2-Country/main/data/GeoLite2-Country.mmdb) | Used in Surge, Clash, QuantumultX for identifying Country IPs |
+| GeoIP2-ASN.mmdb | [`data/GeoIP2-ASN.mmdb`](https://raw.githubusercontent.com/Thoseyearsbrian/GeoIP2-ASN/main/data/GeoIP2-ASN.mmdb) | For IP-ASN matching in Surge, Clash, Quantumult X to identify network ownership (e.g., cloud or telecom). |
 
 ## **Configuration Guide**
 
@@ -59,7 +59,7 @@ This project requires access to the official MaxMind GeoLite2 database. To enabl
 
 1. Register on [MaxMind](https://www.maxmind.com) and obtain your GeoLite2 License Key
 
-2. Open your repository: GitHub → Settings → Secrets and variables → Actions
+2. Open the settings page of this repository, then navigate to: Settings → Secrets and variables → Actions, and add the following items.
 
 3. Create the following Secrets (names must match exactly):
 
@@ -71,29 +71,32 @@ This project requires access to the official MaxMind GeoLite2 database. To enabl
 Copy the file URL → Open Surge → Go to General → GeoIP Database → Remove previous configuration (if any) → Paste the new URL → Update Now → Apply → Done!
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Thoseyearsbrian/GeoIP2-Country/main/Icons/Groups/surge-geoip-config-guide-step-by-step-en.png" width="600">
+  <img src="https://raw.githubusercontent.com/Thoseyearsbrian/GeoIP2-ASN/main/Icons/Groups/surge-geoip-config-guide-step-by-step-en.png" width="600">
 </p>
 
 ## **⚠️ Important Notes**
 
-1. **In this project, only manual commits (made by real developers) are signed with a GPG key.**
+1. **Only manual commits by the actual developer are GPG-signed in this project.**
 
-   Automated updates (such as GeoLite2 database updates) are executed via GitHub Actions and **do not use GPG signatures**. Please verify the committer as [`github-actions[bot]`](https://github.com/apps/github-actions) to consider the commit valid and trustworthy.
+   Automated updates (such as GeoLite2 ASN data sync) are performed by GitHub Actions and are not GPG-signed. Please recognize commits by [github-actions[bot]](https://github.com/apps/github-actions) as valid and trusted.
 
-   - Manual commits are still GPG-signed to identify the authentic developer  
-   - We do **not recommend** storing any GPG private keys on GitHub to prevent key leakage and signature abuse
+   - Manual commits are GPG-signed to verify the developer's identity  
+   - It is strongly discouraged to store any GPG private keys on GitHub to prevent key leakage or misuse
 
-2. **It is recommended to combine `China.list` (for domains) with `GEOIP,CN` (for IP ranges) to improve accuracy when matching China-related traffic:**
+2. **The `.mmdb` file generated by this project is compatible with Surge, Clash, Quantumult X, and other tools that support ASN matching, and is commonly used to identify the following network attribution scenarios:**
 
-       RULE-SET,https://raw.githubusercontent.com/Thoseyearsbrian/Aegis/main/rules/China.list, DIRECT   # Accurately match domains related to China
-       GEOIP,CN,DIRECT                                                                                  # Match mainland China IPs not covered by domain rules
-       FINAL,REJECT                                                                                     # Final default reject rule (do not place GEOIP below this)
+   - Cloud provider attribution (e.g., AWS, Google Cloud, Aliyun)
+   - Security policy enforcement (e.g., detection of APT-related VPS providers)
+   - Network behavior tagging (e.g., commercial ISPs, self-hosted BGP nodes, CDN relays)
 
-3. **The GeoLite2-Country database generated by this project can be used for GEOIP queries (such as US, AU, CN), as it provides a complete country-level IP range structure.**
+3. **It is recommended to use this file alongside IP-ASN rules to enable fine-grained traffic routing or blocking policies:**
 
-       GEOIP, US, PROXY   # Valid
-       GEOIP, AU, PROXY   # Valid
-       GEOIP, CN, DIRECT  # Valid
+   ```bash
+   IP-ASN,16509,PROXY     # Amazon AWS (AS16509), proxy recommended
+   IP-ASN,20473,REJECT    # Vultr VPS (AS20473), often used for anonymous traffic, block suggested
+   IP-ASN,9009,REJECT     # M247 EU anonymizing network, high APT/malicious traffic presence
+   IP-ASN,15169,PROXY     # Google global backbone, proxy recommended in China Mainland
+   ```
 
 ## **🔐 Disclaimer**
 
@@ -111,4 +114,4 @@ This project is **intended for developers with a technical background and awaren
 
 - This project uses GitHub Actions to automatically pull data from MaxMind. **You must register on MaxMind and obtain your own License Key** to run the build script or automation legally.
 - GeoLite2 data is copyrighted by [MaxMind, Inc.](https://www.maxmind.com/) and is licensed under the [GeoLite2 EULA](https://www.maxmind.com/en/geolite2/eula).
-- All scripts and configuration files in this project are licensed under the [Apache License 2.0](https://raw.githubusercontent.com/Thoseyearsbrian/GeoIP2-Country/main/LICENSE).
+- All scripts and configuration files in this project are licensed under the [Apache License 2.0](https://raw.githubusercontent.com/Thoseyearsbrian/GeoIP2-ASN/main/LICENSE).

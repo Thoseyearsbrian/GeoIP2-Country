@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-下载并解压 MaxMind 官方 GeoLite2-Country.mmdb 数据库
+下载并解压 MaxMind 官方 GeoIP2-ASN.mmdb 数据库
 
 - 自动读取 MAXMIND_LICENSE_KEY 环境变量
 - 支持本地使用 .env 文件（用于本地开发）
-- 从 MaxMind 官方地址下载 GeoLite2-Country 压缩包
+- 从 MaxMind 官方地址下载 GeoIP2-ASN 压缩包
 - 解压出 .mmdb 文件至 ./release 目录
 """
 
@@ -29,13 +29,13 @@ if not license_key:
 # 下载 URL
 url = (
     "https://download.maxmind.com/app/geoip_download"
-    f"?edition_id=GeoLite2-Country&license_key={license_key}&suffix=tar.gz"
+    f"?edition_id=GeoIP2-ASN&license_key={license_key}&suffix=tar.gz"
 )
 
-tar_path = "GeoLite2.tar.gz"
+tar_path = "GeoIP2-ASN.tar.gz"
 output_dir = "release"
 
-print("开始从 MaxMind 下载 GeoLite2-Country 数据库...")
+print("开始从 MaxMind 下载 GeoIP2-ASN 数据库...")
 print(f"下载地址: {url}")
 
 try:
