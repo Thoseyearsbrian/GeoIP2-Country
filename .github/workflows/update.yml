@@ -1,4 +1,4 @@
-name: Update GeoLite2-Country.mmdb
+name: GeoLite2-Country
 
 on:
   schedule:
