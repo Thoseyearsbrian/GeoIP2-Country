@@ -1,4 +1,4 @@
-name: GeoLite2-Country
+name: GeoLite2-Country.mmdb
 
 on:
   schedule:
