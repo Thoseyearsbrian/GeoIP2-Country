@@ -6,6 +6,12 @@
 <h1 align="center">GeoIP2-Country 自动构建与更新方案</h1>
 
 <p align="center">
+  [<a href="https://github.com/Thoseyearsbrian/GeoIP2-Country/blob/main/Docs/zh-CN/README.md">简体中文</a>]
+  [<a href="https://github.com/Thoseyearsbrian/GeoIP2-Country/blob/main/Docs/zh-TC/README.md">繁體中文</a>]
+  [<a href="https://github.com/Thoseyearsbrian/GeoIP2-Country/blob/main/Docs/en-US/README.md">English</a>]
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/License-Apache%202.0-blue.svg" alt="License: Apache 2.0" />
   <img src="https://github.com/Thoseyearsbrian/GeoIP2-Country/actions/workflows/update.yml/badge.svg" alt="GeoIP Auto Update Status" />
   <img src="https://img.shields.io/github/stars/Thoseyearsbrian/GeoIP2-Country?style=social" alt="GitHub stars" />
@@ -14,10 +20,6 @@
   <a href="https://github.com/Thoseyearsbrian/GeoIP2-Country">
     <img src="https://img.shields.io/badge/Mirror--Prohibited-red" alt="Mirror Prohibited" />
   </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/Thoseyearsbrian/GeoIP2-Country/blob/main/Docs/en-US/README.md"><b>【English Documentation Here】</b></a>
 </p>
 
 ## 项目概述
@@ -94,8 +96,8 @@
 3. **本项目生成的 GeoLite2-Country 数据库可用于 GEOIP 查询（如 US、AU、CN 等），因为该数据库本身提供完整的国家级 IP 区段结构。**
 
    ```bash
-   GEOIP, US, PROXY   # 正确
-   GEOIP, AU, PROXY   # 正确
+   GEOIP, US, Proxy   # 正确
+   GEOIP, AU, Proxy   # 正确
    GEOIP, CN, DIRECT  # 正确
    ```
 
