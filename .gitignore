@@ -38,5 +38,8 @@ __pycache__/
 env/
 venv/
 
+# 环境变量文件（如 MaxMind License Key 等）
+.env
+
 # Git 忽略规则本身
 .gitignore
