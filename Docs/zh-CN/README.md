@@ -1,6 +1,6 @@
 <!-- Aegis Logo -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Thoseyearsbrian/Aegis/main/assets/Aegis_Cover_Image.png" alt="Aegis Cover Image"/>
+  <img src="https://raw.githubusercontent.com/Thoseyearsbrian/GeoIP2-Country/main/assets/logos/aegis-logo.png" alt="Aegis Logo"/>
 </p>
 
 <h1 align="center">GeoIP2-Country 自动构建与更新方案</h1>
